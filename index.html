@@ -29,7 +29,13 @@
             <nav aria-label="Navigation principale">
 
                 <a href="#hero"><img src="images/logo blanc.png" alt="Logo de Guillaume Loriot"></a>
-                <ul>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+                <label for="nav-toggle" class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="menu">
                     <li>
                         <a href="#about" lang="en">ABOUT</a>
                     </li>
@@ -120,7 +126,7 @@
                         <p>Après avoir fait face à certaines dificultés, j'ai décidé de changer de voie professionnelle.
                             L'informatique m'ayant toujours intéressé, j'ai fait de l'autoformation afin de confirmer
                             mon appétence pour le développement
-                            informatique. Suite à cela j'ai trouvé la formation qui me convenait c'est ainsi que je
+                            informatique. Suite à cela j'ai trouvé la formation qui me convenait; c'est ainsi que je
                             prépare actuellement
                             le titre professionnel Développeur Web et Web Mobile via Human Booster.
                         </p>
@@ -344,7 +350,8 @@
                             <div>
                                 <p class="big-number">1</p>
                                 <p>Projet d'application web permettant la simplification de la gestion de son potager.
-                                    Création et gestion de zones de cultures avec système d'alerte en fonction de critères
+                                    Création et gestion de zones de cultures avec système d'alerte en fonction de
+                                    critères
                                     liés aux plantes<br>
                                     <a href="https://github.com/GuillaumeLoriot/garden-manager" target="_blank"
                                         rel="noopener noreferrer">->En savoir plus</a>
@@ -374,8 +381,7 @@
                         </div>
                         <div class="input-group">
                             <label for="first-name">Prénom</label>
-                            <input type="text" class="input-form" id="first-name" name="first-name"
-                                required>
+                            <input type="text" class="input-form" id="first-name" name="first-name" required>
                         </div>
                         <div class="input-group">
                             <label for="email">Adresse Mail</label>

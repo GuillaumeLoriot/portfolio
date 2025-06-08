@@ -42,8 +42,12 @@ body {
                 backdrop-filter: blur(4px);
                 z-index: 10;
 
+                .nav-toggle {
+                    display: none;
+                }
+
                 img {
-                    width: 70px;
+                    width: 4rem;
                     margin: 10px;
                     filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 1));
 
@@ -54,7 +58,7 @@ body {
                     }
                 }
 
-                ul {
+                .menu {
                     width: 70%;
                     display: flex;
                     justify-content: flex-end;
@@ -736,21 +740,26 @@ body {
                                     div {
                                         width: 100%;
                                         align-items: center;
-                                        a{
-                                            h3{
+
+                                        a {
+                                            h3 {
                                                 margin: 1rem;
                                             }
                                         }
+
                                         &.project-description {
-                                            div{
+                                            div {
                                                 flex-direction: row;
+
                                                 p {
                                                     margin: 2rem 1rem;
                                                 }
                                             }
+
                                             .project-technos {
                                                 margin: 1rem;
-                                                img{
+
+                                                img {
                                                     width: 7%;
                                                 }
                                             }
@@ -774,6 +783,81 @@ body {
 @media screen and (max-width: 480px) {
     html {
         font-size: 12px;
+
+        body {
+            #hero {
+                #navbar {
+                    nav {
+                        justify-content: space-between;
+                        align-items: center;
+
+                        /* bouton burger */
+                        .burger {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            width: 2.5rem;
+                            height: 2rem;
+                            margin-right: 1.5rem;
+                            z-index: 50;
+
+                            span {
+                                width: 100%;
+                                height: 3px;
+                                background: whitesmoke;
+                                border-radius: 2px;
+                                transition: transform 0.3s ease, opacity 0.3s ease;
+                            }
+                        }
+
+                        /* menu mobile caché par défaut */
+                        .menu {
+                            display: none;
+                            flex-direction: column;
+                            position: fixed;
+                            top: 6rem;
+                            /* sous la navbar */
+                            right: 0;
+                            width: 30%;
+                            padding-top: 1rem;
+                            z-index: 50;
+
+                            li {
+                                width: 100%;
+                                margin: 0.2rem;
+
+                                a {
+                                    display: block;
+                                    border: unset;
+                                    background: linear-gradient(90deg, rgba(235, 237, 247, 0.1) 0%, rgba(46, 43, 57, 0.8) 100%);
+                                    text-shadow: 1px 1px 3px black;
+                                    padding: 0.5rem 1rem;
+                                    text-align: right;
+                                }
+                            }
+                        }
+
+                        /* animations du burger + affichage du menu au check */
+                        .nav-toggle:checked+.burger span:nth-child(1) {
+                            transform: translateY(8px) rotate(45deg);
+                        }
+
+                        .nav-toggle:checked+.burger span:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        .nav-toggle:checked+.burger span:nth-child(3) {
+                            transform: translateY(-8px) rotate(-45deg);
+                        }
+
+                        .nav-toggle:checked~.menu {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
 }
