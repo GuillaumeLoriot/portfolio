@@ -42,6 +42,7 @@ body {
                 -webkit-backdrop-filter: blur(4px);
                 backdrop-filter: blur(4px);
                 z-index: 10;
+
                 .nav-toggle {
                     display: none;
                 }
@@ -490,7 +491,6 @@ body {
 
                 .content {
                     flex-direction: column;
-                    margin-bottom: 50px;
 
                     #contact-form {
                         height: 45vh;
@@ -573,6 +573,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 3rem;
         padding: 2rem 3rem;
         flex-wrap: wrap;
         border-top: 1px solid #ccc;
@@ -646,7 +647,19 @@ body {
 
 /*------------------ MEDIA QUERIES ----------------------------- */
 
+/* Ecrans ≥1200px (xl) */
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
 
+/* Ecrans ≥1400px (xxl) */
+@media (min-width: 1400px) {
+  html {
+    font-size: 20px;
+  }
+}
 
 /* Tablette */
 @media screen and (max-width: 768px) {
@@ -763,6 +776,20 @@ body {
                                                 }
                                             }
                                         }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &#contact {
+                        .content {
+                            #contact-form {
+                                height: unset !important;
+
+                                div {
+                                    #message {
+                                        height: 10rem !important;
                                     }
                                 }
                             }
