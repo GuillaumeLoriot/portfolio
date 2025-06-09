@@ -647,15 +647,9 @@ body {
 
 /*------------------ MEDIA QUERIES ----------------------------- */
 
-/* Ecrans ≥1200px (xl) */
-@media (min-width: 1200px) {
-  html {
-    font-size: 18px;
-  }
-}
 
-/* Ecrans ≥1400px (xxl) */
-@media (min-width: 1400px) {
+/* Ecrans ≥1800px (xxl) */
+@media screen and (min-width: 1800px) {
   html {
     font-size: 20px;
   }
