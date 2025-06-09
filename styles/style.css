@@ -491,6 +491,7 @@ body {
 
                 .content {
                     flex-direction: column;
+                    margin-bottom: 4rem;
 
                     #contact-form {
                         height: 45vh;
@@ -573,7 +574,6 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 3rem;
         padding: 2rem 3rem;
         flex-wrap: wrap;
         border-top: 1px solid #ccc;
